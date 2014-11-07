@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="inspinia">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title set in pageTitle directive -->
+  <title page-title></title>
+
+
+  <link href="all.css" rel="stylesheet">
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="all.js"></script>
+  <script type="text/javascript" src="<%= grunt.config.get('pkg.name') %>.js"></script>
+
+</head>
+
+<!-- ControllerAs syntax -->
+<!-- Main controller with serveral data used in Inspinia theme on diferent view -->
+<body ng-controller="MainCtrl">
+
+<!-- Wrapper-->
+<div id="wrapper">
+
+  <!-- Navigation -->
+  <div ng-include="'partials/left.tpl.html'"></div>
+  <!-- Page wraper -->
+  <!-- ng-class with current state name give you the ability to extended customization your view -->
+  <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+    <!-- Page wrapper -->
+    <!--<div ng-include="'views/common/topnavbar.html'"></div>-->
+    <div ng-include="'partials/topnavbar.tpl.html'"></div>
+
+    <!-- Main view  -->
+    <!--<div ng-include="'partials/content.tpl.html'"></div>-->
+
+    <div ui-view></div>
+
+    <!-- Footer -->
+    <div ng-include="'views/common/footer.html'"></div>
+
+  </div>
+  <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
+</body>
+</html>

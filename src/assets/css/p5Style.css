@@ -1,0 +1,32 @@
+.p5-left-column{
+  padding-top: 40px;
+}
+.p5_wrapper #page-wrapper{
+  margin: 0 auto;
+}
+.p5-logo .left{
+  float: left;
+}
+.p5-logo .right{
+  float: right;
+}
+.p5_wrapper .expired-session{
+  width: 600px;
+}
+.clearer{
+  clear: both;
+}
+.p5-center{
+  text-align: center;
+}
+.p5_wrapper .p5-orange{
+  width: 150px;
+  height: 150px;
+  background-color: #000;
+}
+.p5-message{
+  border: 0;
+}
+.p5-vertical-align-middle span, .p5-vertical-align-middle h3{
+  vertical-align: middle;
+}

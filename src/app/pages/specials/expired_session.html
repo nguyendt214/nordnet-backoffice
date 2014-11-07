@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="p5Admin">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Page title set in pageTitle directive -->
+  <title page-title></title>
+
+  <link href="all.css" rel="stylesheet">
+  <link href="all.css" rel="stylesheet">
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="all.js"></script>
+  <script type="text/javascript" src="backend-client.js"></script>
+</head>
+<!-- ControllerAs syntax -->
+<!-- Main controller with serveral data used in Inspinia theme on diferent view -->
+<body ng-controller="p5AdminCtrl">
+
+<!-- Wrapper-->
+<div id="wrapper" class="p5_wrapper">
+  <!-- ng-class with current state name give you the ability to extended customization your view -->
+  <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+    <!-- Main view  -->
+    <div class="middle-box text-center animated fadeInDown expired-session">
+      <div class="p5-logo">
+        <div class="left p5-orange">
+          <img src="img/350px-Orange_logo.svg.png" width="100px" height="100px"/>
+        </div>
+
+        <div class="right p5-nordnet">
+          <img src="img/clientNordnet.jpg" height="100px"/>
+        </div>
+        <div class="clearer"></div>
+        <div class="p5-center">
+          <h3>{{ "Votre session a expirée." | translate }}</h3>
+          <h3>{{ "Veuillez vous reconnecter" | translate }}</h3>
+          <button type="submit" class="btn btn-primary block m-b">{{ "Se connecter" | translate }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End page wrapper-->
+</div>
+<!-- End wrapper-->
+</body>
+</html>

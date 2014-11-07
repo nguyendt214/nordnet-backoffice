@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="p5Admin">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Page title set in pageTitle directive -->
+  <title page-title></title>
+
+  <link href="all.css" rel="stylesheet">
+  <link href="all.css" rel="stylesheet">
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="all.js"></script>
+  <script type="text/javascript" src="backend-client.js"></script>
+</head>
+<!-- ControllerAs syntax -->
+<!-- Main controller with serveral data used in Inspinia theme on diferent view -->
+<body ng-controller="p5AdminCtrl">
+
+<!-- Wrapper-->
+<div id="wrapper" class="p5_wrapper">
+  <!-- ng-class with current state name give you the ability to extended customization your view -->
+  <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+    <!-- Main view  -->
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+      <div>
+        <h2>{{ "Bienvenue sur le Support Client" | translate }}</h2>
+
+        <h3>{{ "Support client de I'application contrôle parantal" | translate }}</h3>
+
+        <h3>{{ "Veuillez vous identifier" | translate }}</h3>
+
+        <form class="m-t" role="form" action="#">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="{{ 'Adresse Email' | translate }}" required=""
+                   ng-model="user.email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="{{ 'Mot de passe' | translate }}" required="">
+          </div>
+          <button type="submit" class="btn btn-primary block full-width m-b">{{ "Se connecter" | translate }}</button>
+
+          <a href="#">
+            <small>{{ 'Forgot password?' | translate }}</small>
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- End page wrapper-->
+</div>
+<!-- End wrapper-->
+</body>
+</html>
